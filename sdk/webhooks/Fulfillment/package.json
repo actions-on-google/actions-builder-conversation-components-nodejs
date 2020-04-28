@@ -1,0 +1,28 @@
+{
+  "name": "actions-builder-conversation-components",
+  "version": "1.0.0",
+  "private": true,
+  "description": "An Action that demonstrates the various available types of conversation components.",
+  "main": "index.js",
+  "engines": {
+    "node": "8"
+  },
+  "scripts": {
+    "lint": "eslint --fix \"**/*.js\"",
+    "test": "npm run lint",
+    "serve": "firebase serve --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "actions-on-google": "https://storage.googleapis.com/studio-eap.appspot.com/conversation-v3-eap-11.tgz",
+    "firebase-admin": "~8.0.0",
+    "firebase-functions": "^3.1.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}

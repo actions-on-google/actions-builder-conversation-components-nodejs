@@ -1,0 +1,5 @@
+trainingPhrases:
+- Card
+- ($prompts1 'BasicCard' auto=true)
+- ($prompts1 'card' auto=true)
+- ($prompts1 'Basic Card' auto=true)

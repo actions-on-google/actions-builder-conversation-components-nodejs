@@ -1,0 +1,15 @@
+conditionalEvents:
+- condition: scene.slots.status == "FINAL"
+  handler:
+    webhookHandler: option
+  transitionToScene: Prompts
+slots:
+- commitBehavior:
+    writeSessionParam: prompt_option
+  name: prompt_option
+  promptSettings:
+    initialPrompt:
+      webhookHandler: list
+  required: true
+  type:
+    name: prompt_option

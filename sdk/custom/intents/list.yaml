@@ -1,0 +1,5 @@
+trainingPhrases:
+- select ($prompts1 'list' auto=true)
+- ($prompts1 'list' auto=true) select
+- ($prompts1 'list' auto=true)
+- ($prompts1 'List' auto=true)

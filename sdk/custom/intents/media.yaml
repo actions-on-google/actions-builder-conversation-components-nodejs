@@ -1,0 +1,9 @@
+trainingPhrases:
+- audio response
+- audioresponse
+- mediaresponse
+- media response
+- ($prompts1 'audio' auto=true)
+- ($prompts1 'media' auto=true)
+- ($prompts1 'Audio' auto=true)
+- ($prompts1 'Media' auto=true)

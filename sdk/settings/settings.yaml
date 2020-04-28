@@ -1,0 +1,10 @@
+defaultLocale: en
+localizedSettings:
+  developerEmail: example@example.com
+  developerName: Example Developer Name
+  fullDescription: This action demonstrates conversation components.
+  privacyPolicyUrl: https://example.com
+  sampleInvocations:
+  - talk to conversation components test
+  shortDescription: Conversation components test action
+projectId: <PROJECT_ID>

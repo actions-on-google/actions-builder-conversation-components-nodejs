@@ -1,0 +1,45 @@
+intentEvents:
+- handler:
+    webhookHandler: card
+  intent: card
+  transitionToScene: Prompts
+- intent: collection
+  transitionToScene: CollectionPrompt
+- intent: list
+  transitionToScene: ListPrompt
+- handler:
+    webhookHandler: media
+  intent: media
+  transitionToScene: Prompts
+- handler:
+    webhookHandler: table
+  intent: table
+  transitionToScene: Prompts
+- handler:
+    webhookHandler: simple
+  intent: simple
+  transitionToScene: Prompts
+- handler:
+    webhookHandler: image
+  intent: image
+  transitionToScene: Prompts
+- handler:
+    webhookHandler: media_status
+  intent: actions.intent.MEDIA_STATUS_FINISHED
+  transitionToScene: Prompts
+onEnter:
+  staticPrompt:
+    candidates:
+    - promptResponse:
+        lastSimple:
+          variants:
+          - speech: I can show you basic cards, lists, and more on your phone and
+              smart display. What would you like to see?
+        suggestions:
+        - title: Simple
+        - title: Image
+        - title: Card
+        - title: Table
+        - title: List
+        - title: Collection
+        - title: Media

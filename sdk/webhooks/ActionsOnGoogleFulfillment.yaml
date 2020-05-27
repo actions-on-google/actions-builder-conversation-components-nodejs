@@ -11,8 +11,15 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-trainingPhrases:
-- TableCard
-- ($prompts1 'Table' auto=true) card
-- ($prompts1 'table' auto=true)
-- ($prompts1 'Table' auto=true)
+handlers:
+- name: card
+- name: media
+- name: table
+- name: simple
+- name: image
+- name: media_status
+- name: option
+- name: list
+- name: collection
+inlineCloudFunction:
+  executeFunction: ActionsOnGoogleFulfillment

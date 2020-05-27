@@ -1,0 +1,23 @@
+{
+  "name": "actions-builder-conversation-components",
+  "version": "0.0.0",
+  "private": true,
+  "description": "An Action that demonstrates the various available types of conversation components.",
+  "main": "index.js",
+  "engines": {
+    "node": "10"
+  },
+  "scripts": {
+    "lint": "eslint \"**/*.js\"",
+    "lint:fix": "eslint --fix \"**/*.js\""
+  },
+  "dependencies": {
+    "@assistant/conversation": "^3.0.0",
+    "firebase-admin": "~8.12.1",
+    "firebase-functions": "^3.6.2"
+  },
+  "devDependencies": {
+    "eslint": "^5.2.0",
+    "eslint-config-google": "^0.9.1"
+  }
+}

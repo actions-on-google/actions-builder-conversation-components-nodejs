@@ -261,18 +261,18 @@ app.handle('media', (conv) => {
         url: 'https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg',
         image: {
           large: ASSISTANT_LOGO_IMAGE,
-        }
-      }
+        },
+      },
     ],
     mediaType: 'AUDIO',
-    optionalMediaControls: ['PAUSED', 'STOPPED']
+    optionalMediaControls: ['PAUSED', 'STOPPED'],
   }));
 });
 
 // Media Status
 app.handle('media_status', (conv) => {
   const mediaStatus = conv.intent.params.MEDIA_STATUS.resolved;
-  switch(mediaStatus) {
+  switch (mediaStatus) {
     case 'FINISHED':
       conv.add('Media has finished playing.');
       break;
@@ -281,12 +281,12 @@ app.handle('media_status', (conv) => {
       break;
     case 'PAUSED':
       conv.add(new Media({
-        mediaType: 'MEDIA_STATUS_ACK'
+        mediaType: 'MEDIA_STATUS_ACK',
       }));
-      break
+      break;
     case 'STOPPED':
       conv.add(new Media({
-        mediaType: 'MEDIA_STATUS_ACK'
+        mediaType: 'MEDIA_STATUS_ACK',
       }));
       break;
     default:

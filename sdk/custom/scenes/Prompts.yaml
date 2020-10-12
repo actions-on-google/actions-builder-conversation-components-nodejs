@@ -52,6 +52,8 @@ intentEvents:
     webhookHandler: media_status
   intent: actions.intent.MEDIA_STATUS_FAILED
   transitionToScene: Prompts
+- intent: actions.intent.CANCEL
+  transitionToScene: actions.scene.END_CONVERSATION
 onEnter:
   staticPrompt:
     candidates:

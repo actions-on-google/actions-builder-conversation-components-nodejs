@@ -20,8 +20,6 @@ import {resolve} from 'path';
 import {readFileSync} from 'fs';
 import {safeLoad} from 'js-yaml';
 
-const UPDATE_PREVIEW_FROM_DRAFT = true;
-const UPDATE_PREVIEW_FROM_SUBMITTED_VERSION_NUMBER = -1;
 const DEFAULT_LOCALE = 'en-US';
 const DEFAULT_SURFACE = 'PHONE';
 const CONTINUE_CONVO_PROMPT =
@@ -61,16 +59,14 @@ describe('My Action Test Suite', function() {
   before('before all', async function() {
     // Load project settings to read project ID and trigger phrase.
     loadProjectSettings();
-    test = new ActionsOnGoogleTestManager();
-    await test.setupSuite(
-        PROJECT_ID, UPDATE_PREVIEW_FROM_DRAFT,
-        UPDATE_PREVIEW_FROM_SUBMITTED_VERSION_NUMBER, {});
+    test = new ActionsOnGoogleTestManager({ projectId: PROJECT_ID });
+    await test.writePreviewFromDraft();
     test.setSuiteLocale(DEFAULT_LOCALE);
     test.setSuiteSurface(DEFAULT_SURFACE);
   });
 
   afterEach('post test cleans', async function() {
-    await test.cleanUpAfterTest();
+    test.cleanUpAfterTest();
   });
 
   it('trigger only', async function() {

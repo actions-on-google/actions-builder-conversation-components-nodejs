@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "eslint \"**/*.js\"",
     "lint:fix": "eslint --fix \"**/*.js\"",
-    "test": "npm run lint && mocha --recursive --require ts-node/register test/*.ts",
+    "enable-activity-controls": "env GOOGLE_APPLICATION_CREDENTIALS=$PWD/service_account.json web-and-app-activity-controls",
+    "test": "npm run lint && env GOOGLE_APPLICATION_CREDENTIALS=$PWD/service_account.json mocha --recursive --require ts-node/register test/*.ts",
     "serve": "firebase serve",
     "deploy": "firebase deploy"
   },

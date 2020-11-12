@@ -23,6 +23,27 @@
 + You can test your Action on any Google Assistant-enabled device on which the Assistant is signed into the same account used to create this project. Just say or type, “OK Google, talk to my test app”.
 + You can also use the Actions on Google Console simulator to test most features and preview on-device behavior.
 
+### Running tests
+
+This Action uses the [Assistant conversation testing library](https://github.com/actions-on-google/assistant-conversation-testing-nodejs) for testing. Follow the steps below to run the tests for this project:
+
+1.  Enable the Actions API for your project (The Actions API is enabled by default for newly created projects):
+    1. Visit the [Google API console](https://console.developers.google.com/apis/library) and select your project from the **Select a project** dropdown.
+    1. If the Action API is not enabled, search for *"Actions API"* and click **Enable**.
+1.  Create a Service Account key:
+    1. Visit the [Google Cloud console credentials page](https://console.developers.google.com/apis/credentials) and select your project from the **Select a project** dropdown.
+    1. In the "Service Accounts" click on the "App Engine default service account" service account.
+    1.  Enter a service account name and click **Create**.
+    1.  From the **Select a role** dropdown, select **Project > Owner**.
+    1.  Click **Continue**.
+    1.  Click **ADD KEY**, then select **Create new key**, then press **CREATE**
+        to download the service account JSON file.
+1. Rename the service account file to `service_account.json`, and place it in the root folder of the project.
+1. Enable [Web and App Activity Controls](https://support.google.com/websearch/answer/54068) for the service account. It is necessary to have this setting enabled in order to call the Actions API.
+    + `npm run enable-activity-controls`
+1. Run tests
+    + `npm run test`
+
 ## References & Issues
 + Questions? Go to [StackOverflow](https://stackoverflow.com/questions/tagged/actions-on-google) or the [Assistant Developer Community on Reddit](https://www.reddit.com/r/GoogleAssistantDev/).
 + For bugs, please report an issue on Github.

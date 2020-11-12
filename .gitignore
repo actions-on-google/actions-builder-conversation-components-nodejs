@@ -5,4 +5,4 @@ package-lock.json
 yarn.lock
 .firebase
 *.log
-
+service_account.json

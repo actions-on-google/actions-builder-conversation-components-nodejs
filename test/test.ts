@@ -48,7 +48,7 @@ describe('My Action Test Suite', function() {
     try {
       let fileContents = readFileSync(
         resolve(__dirname, '../sdk/settings/settings.yaml'), 'utf8');
-      let data = safeLoad(fileContents);
+      let data = safeLoad(fileContents) as any;
       PROJECT_ID = data.projectId;
       TRIGGER_PHRASE = `Talk to ${data.localizedSettings.displayName}`;
     } catch (e) {

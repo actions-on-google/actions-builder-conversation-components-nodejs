@@ -269,6 +269,59 @@ app.handle('media', (conv) => {
   }));
 });
 
+app.handle('media_playlist', (conv) => {
+  conv.add('This is a media response with multiple media objects');
+  conv.add(new Media({
+    mediaObjects: [
+      {
+        name: 'Cartoon Boing',
+        description: 'Cartoon Boing SFX',
+        url: 'https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg',
+        image: {
+          large: ASSISTANT_LOGO_IMAGE,
+        }
+      },
+      {
+        name: 'Cymbal Kick',
+        description: 'Cymbal Kick SFX',
+        url: 'https://actions.google.com/sounds/v1/cartoon/cymbal_kick.ogg',
+        image: {
+          large: ASSISTANT_LOGO_IMAGE,
+        }
+      },
+      {
+        name: 'Drum Roll',
+        description: 'Drum Roll SFX',
+        url: 'https://actions.google.com/sounds/v1/cartoon/drum_roll.ogg',
+        image: {
+          large: ASSISTANT_LOGO_IMAGE,
+        }
+      }
+    ],
+    mediaType: 'AUDIO',
+    optionalMediaControls: ['PAUSED', 'STOPPED']
+  }));
+});
+
+app.handle('media_repeat', (conv) => {
+  conv.add('This is a media response with a repeat');
+  conv.add(new Media({
+    mediaObjects: [
+      {
+        name: 'Media name',
+        description: 'Media description',
+        url: 'https://actions.google.com/sounds/v1/cartoon/cartoon_boing.ogg',
+        image: {
+          large: ASSISTANT_LOGO_IMAGE,
+        }
+      }
+    ],
+    mediaType: 'AUDIO',
+    repeatMode: 'ALL',
+    optionalMediaControls: ['PAUSED', 'STOPPED']
+  }));
+});
+
 // Media Status
 app.handle('media_status', (conv) => {
   const mediaStatus = conv.intent.params.MEDIA_STATUS.resolved;

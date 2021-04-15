@@ -12,7 +12,7 @@
     "lint:fix": "eslint --fix \"**/*.js\""
   },
   "dependencies": {
-    "@assistant/conversation": "^3.0.0",
+    "@assistant/conversation": "^3.5.0",
     "firebase-admin": "~8.12.1",
     "firebase-functions": "^3.6.2"
   },

@@ -25,6 +25,14 @@ intentEvents:
   intent: media
   transitionToScene: Prompts
 - handler:
+    webhookHandler: media_playlist
+  intent: media_playlist
+  transitionToScene: Prompts
+- handler:
+    webhookHandler: media_repeat
+  intent: media_repeat
+  transitionToScene: Prompts
+- handler:
     webhookHandler: table
   intent: table
   transitionToScene: Prompts

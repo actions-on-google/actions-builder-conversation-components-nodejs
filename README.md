@@ -1,5 +1,8 @@
 # Actions on Google: Conversation Components Sample
 
+*:warning: Warning: Conversational Actions will be deprecated on June 13, 2023. For more information, see [Conversational Actions Sunset](https://goo.gle/ca-sunset).*
+
+
 ### Prerequisites
 1. Node.js and NPM
     + We recommend installing using [nvm for Linux/Mac](https://github.com/creationix/nvm) and [nvm-windows for Windows](https://github.com/coreybutler/nvm-windows)
